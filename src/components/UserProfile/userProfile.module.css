@@ -1,0 +1,109 @@
+.userProfileMainContainer {
+  width: 100vw;
+  height: 500vw;
+  overflow-x: hidden;
+}
+.userProfileContainer {
+  position: relative;
+  width: 100vw;
+  /* display: flex;
+  justify-content: space-around;
+  align-items: start; */
+  min-height: 100vh; /* Adjust min-height if needed to fill the viewport */
+  height: fit-content; /* Use auto to adjust the height based on content */
+}
+.userProfileSection {
+  position: absolute;
+  right: 0;
+  height: fit-content;
+  min-height: 100vh;
+  width: 85vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.topSection {
+  width: 70%;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+  border-bottom: 1px solid rgb(219, 216, 216);
+  /* padding-block: 10px; */
+}
+.topSecImgDiv {
+  height: 90%;
+  border-radius: 5%;
+  overflow: hidden;
+}
+.topSecImgDiv img {
+  height: 100%;
+}
+.userInfo {
+  width: 40vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: space-evenly;
+}
+.userInfo_topSection {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  gap: 3%;
+}
+.userInfo_userNameText {
+  font-size: 1.6rem;
+  font-weight: 540;
+}
+.userInfo_topSection_btn {
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(240, 239, 239);
+  cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+.userInfo_topSection_btn:hover {
+  background-color: rgb(201, 198, 198);
+}
+.midSecInfoDiv {
+  display: flex;
+  gap: 3%;
+  padding-block: 1%;
+}
+.midSecInfoDiv_userDetail {
+  padding-inline: 2%;
+  display: flex;
+  gap: 10%;
+}
+.midSecInfoDiv_userDetail_num {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.midSecInfoDiv_userDetail_text {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.buttomSecInfoDiv {
+  height: fit-content;
+}
+.bottomSecInfoDiv_nameText {
+  font-size: 1.2em;
+  font-weight: 550;
+}
+.bottomSecInfoDiv_bioText {
+  font-size: 1rem;
+  font-style: italic;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.bottomSecInfoDiv_bioText_heading {
+  font-weight: 800;
+}

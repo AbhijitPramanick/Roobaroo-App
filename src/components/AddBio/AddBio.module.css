@@ -1,0 +1,52 @@
+.addBioContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30%;
+  color: rgb(59, 59, 59);
+}
+.addBioBox {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.addBioContainerHeading {
+  font-size: 2.1rem;
+  margin-bottom: 2%;
+}
+.inputBox {
+  width: 100%;
+  margin-block: 2%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.inputBox_label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding-bottom: 0.2rem;
+}
+.inputBox_input,
+.inputBox_textarea {
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+}
+.navigationBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navigationBoxBtn {
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.2rem;
+}

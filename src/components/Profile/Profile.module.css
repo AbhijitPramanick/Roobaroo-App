@@ -1,0 +1,38 @@
+.profileContainer {
+  min-width: 400px;
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+  background-color: rgb(248, 248, 248);
+  border-radius: 10px;
+}
+.profileContainer_pageheading {
+  width: 15vw;
+  color: grey;
+  letter-spacing: 0.2rem;
+  padding-inline: auto;
+  text-align: center;
+}
+.profileContainer_detailList {
+  border-left: 1px solid rgb(202, 201, 201);
+  padding: 2%;
+  width: 90%;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+}
+.detailist_key {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.detailist_value {
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+}

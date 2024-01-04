@@ -1,0 +1,33 @@
+.footer {
+  height: fit-content;
+  width: 50vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  color: rgb(159, 159, 159);
+  min-width: 700px;
+  margin-top: auto;
+}
+.footerLinks {
+  height: fit-content;
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10%;
+  align-items: center;
+}
+.footerLinksList {
+  list-style: none;
+  display: flex;
+  width: fit-content;
+}
+.footerLinksList li a {
+  text-decoration: none;
+  color: grey;
+  padding-inline: 10px;
+}

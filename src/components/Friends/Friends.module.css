@@ -1,0 +1,78 @@
+.friendsContainer {
+  min-width: 300px;
+  width: 50vw;
+  max-height: 380px;
+  height: 50vh;
+  margin-block: 10px;
+  padding-block: 10px;
+  border: 1px solid rgb(209, 209, 209);
+  justify-content: center;
+  align-items: center;
+}
+.topBtnBox {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: end;
+}
+.topBtnBox_btn {
+  margin: 0.5%;
+  padding: 0.3% 1%;
+  font-size: 1rem;
+  background-color: rgb(226, 226, 226);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.topBtnBox_btn:hover {
+  background-color: grey;
+  color: white;
+}
+.displayUsers_list {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
+}
+.displayUser {
+  width: 50%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5%;
+}
+.displayUser_opHeading {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: rgb(164, 164, 164);
+  margin-bottom: 2%;
+}
+.displayUser_profilePic {
+  height: 70%;
+  border-radius: 5px;
+}
+.displayUser_fullname {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.displayUser_btn {
+  font-size: 0.8rem;
+  padding: 0.1rem 2rem;
+  background-color: rgb(226, 226, 226);
+  color: black;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.displayUser_btn:hover {
+  background-color: grey;
+  color: white;
+}

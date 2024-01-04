@@ -1,0 +1,113 @@
+.createPostContainer {
+  min-width: 400px;
+  max-width: 25vw;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.addPostIcon {
+  width: 50%;
+  height: 50%;
+  opacity: 0.5;
+}
+.addPostBox {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(247, 247, 247);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+  border-radius: 10px;
+  border: 1px solid rgb(236, 236, 236);
+}
+.addPostBoxtopSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+  height: 10%;
+  color: rgb(107, 106, 106);
+  border-bottom: 2px solid rgb(218, 217, 217);
+}
+.addPostBox_heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  width: 90%;
+  text-align: center;
+}
+.addPostBox_heading_closeBtn {
+  height: 100%;
+  width: 7%;
+}
+.mesgTextBox {
+  font-weight: 600;
+  color: rgb(107, 106, 106);
+}
+.addPostBox_userDetail {
+  height: 10%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 5%;
+}
+.addPostBox_userDetail_pic {
+  height: 50px;
+  border-radius: 50%;
+}
+.addPostBox_userDetail_name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.addPostBoxText {
+  width: 95%;
+  font-size: 0.9rem;
+  padding: 5px;
+  height: 20%;
+  overflow-y: auto;
+  border: none;
+  background: transparent;
+  border-radius: 5px;
+  resize: none;
+  outline: none;
+}
+.addPostBox_imgDisplay {
+  height: 25%;
+  min-width: 100%;
+  overflow-y: auto;
+}
+.addPostBox_imgDisplay img {
+  width: 100%;
+}
+.addPostBoxImg {
+  width: 40%;
+  border: 2px solid grey;
+  background-color: rgb(220, 219, 219);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 5px;
+  cursor: pointer;
+}
+.addPostBoxImgFile {
+  display: none;
+}
+.addPostBox_btn {
+  font-size: 1.1rem;
+  padding: 5px;
+  width: 100%;
+  background-color: rgb(212, 212, 212);
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.addPostBox_btn:hover {
+  background-color: rgb(183, 183, 183);
+}

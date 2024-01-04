@@ -1,0 +1,10 @@
+.signUpPageContainer {
+  height: 80%;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  gap: 3%;
+  padding-right: 5%;
+}

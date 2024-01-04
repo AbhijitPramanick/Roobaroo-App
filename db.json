@@ -1,0 +1,189 @@
+{
+  "users": [
+    {
+      "id": "7511c2da-2897-4638-919d-6b229688a1d8",
+      "email": "amanik1995@gmail.com",
+      "username": "abhi123",
+      "fullname": "Abhijit Pramanick",
+      "password": "12345",
+      "profilePic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704210459/rcewjyo1sni80twpmfle.jpg",
+      "dob": "1996-06-12",
+      "gender": "male",
+      "location": "Patna",
+      "education": "Mtech",
+      "profession": "Web dev",
+      "bio": "Hello, I'm Abhijit Pramanick, a 27-year-old web developer with a background in electrical engineering. I find joy in reading books and exploring new places while embracing the dynamic world of web development. Let's connect, share ideas, and create meaningful experiences together!",
+      "posts": [
+        {
+          "id": 1,
+          "text": "Hello",
+          "postPic": ""
+        },
+        {
+          "id": "5cdf050a-e1e7-407d-b1a0-9fed8ad677e5",
+          "text": "Hare Krishna.\nIn Vrindavan's embrace, a divine melody,\nFlute in hand, a soul's symphony.\nKrishna, the cosmic dancer, in rapturous delight,\nGuiding hearts through the cosmic night.\n\nEyes like pools of eternity's grace,\nA radiant smile, love's sacred embrace.\nThrough Brindavan's groves, His footsteps dance,\nA celestial rhythm, a cosmic trance.\n\nGopis enchanted, in devotion's swirl,\nThe music of love, an eternal pearl.\nYamuna's waters, a mirror of His grace,\nReflecting the beauty of that celestial face.\n\nThe peacock's plume, the divine adornment,\nKrishna, the essence of love's fulfillment.\nIn tales of Vrindavan, His lila unfolds,\nA saga of love, eternal and untold.\n\nKrishna, the flute player, a melody divine,\nGuiding souls to a realm beyond time.\nIn every heart, His presence we feel,\nA sacred love, forever real.",
+          "postPic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704280077/hlcqpvtxbaanrssbkbuk.jpg"
+        }
+      ],
+      "friends": []
+    },
+    {
+      "id": "5f3135bc-4165-41d7-ac6f-8992e433ff28",
+      "email": "vicky@gmail.com",
+      "username": "vicy123",
+      "fullname": "vicky Kumar",
+      "password": "12345",
+      "profilePic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704280763/zam7j3sp0t0it5phhqc0.jpg",
+      "dob": "1996-05-12",
+      "gender": "agender",
+      "location": "Patna",
+      "education": "Mtech",
+      "profession": "Web developer",
+      "bio": "i am haopoy",
+      "posts": [
+        {
+          "id": "1b4d70b4-09fe-4774-b8c4-f36c6c31f6d1",
+          "text": "I am happy.",
+          "postPic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704280931/mova3ex8bx5yzrsbmuck.jpg"
+        }
+      ],
+      "friends": []
+    },
+    {
+      "id": "cdf8d0eb-9d3c-4348-9975-4b8b38740ad5",
+      "email": "komal@gmail.com",
+      "username": "komal23",
+      "fullname": "Komal Sharma",
+      "password": "12345",
+      "profilePic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704340130/uskxefc7n7gwavxngck8.jpg",
+      "dob": "1997-05-12",
+      "gender": "two_spirit",
+      "location": "Delhi",
+      "education": "MA Arts",
+      "profession": "Journalist",
+      "bio": "I am exploring the dimensions of life.",
+      "posts": [
+        {
+          "id": "36663531-8ff8-4bdd-9201-d462def7e63b",
+          "text": "Winter is coming.",
+          "postPic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704341315/q7qbpk1cmw8otfosiheu.jpg"
+        },
+        {
+          "id": "1b4d70b4-09fe-4774-b8c4-f36c6c31f6d1",
+          "text": "I am happy.",
+          "postPic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704280931/mova3ex8bx5yzrsbmuck.jpg"
+        }
+      ],
+      "friends": [
+        {
+          "id": "5f3135bc-4165-41d7-ac6f-8992e433ff28"
+        }
+      ]
+    },
+    {
+      "0": {
+        "id": "7511c2da-2897-4638-919d-6b229688a1d8",
+        "email": "amanik1995@gmail.com",
+        "username": "abhi123",
+        "fullname": "Abhijit Pramanick",
+        "password": "12345",
+        "profilePic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704210459/rcewjyo1sni80twpmfle.jpg",
+        "dob": "1996-06-12",
+        "gender": "male",
+        "location": "Patna",
+        "education": "Mtech",
+        "profession": "Web dev",
+        "bio": "Hello, I'm Abhijit Pramanick, a 27-year-old web developer with a background in electrical engineering. I find joy in reading books and exploring new places while embracing the dynamic world of web development. Let's connect, share ideas, and create meaningful experiences together!",
+        "posts": [
+          {
+            "id": 1,
+            "text": "Hello",
+            "postPic": ""
+          },
+          {
+            "id": "5cdf050a-e1e7-407d-b1a0-9fed8ad677e5",
+            "text": "Hare Krishna.\nIn Vrindavan's embrace, a divine melody,\nFlute in hand, a soul's symphony.\nKrishna, the cosmic dancer, in rapturous delight,\nGuiding hearts through the cosmic night.\n\nEyes like pools of eternity's grace,\nA radiant smile, love's sacred embrace.\nThrough Brindavan's groves, His footsteps dance,\nA celestial rhythm, a cosmic trance.\n\nGopis enchanted, in devotion's swirl,\nThe music of love, an eternal pearl.\nYamuna's waters, a mirror of His grace,\nReflecting the beauty of that celestial face.\n\nThe peacock's plume, the divine adornment,\nKrishna, the essence of love's fulfillment.\nIn tales of Vrindavan, His lila unfolds,\nA saga of love, eternal and untold.\n\nKrishna, the flute player, a melody divine,\nGuiding souls to a realm beyond time.\nIn every heart, His presence we feel,\nA sacred love, forever real.",
+            "postPic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704280077/hlcqpvtxbaanrssbkbuk.jpg"
+          }
+        ],
+        "friends": []
+      },
+      "1": {
+        "id": "5f3135bc-4165-41d7-ac6f-8992e433ff28",
+        "email": "vicky@gmail.com",
+        "username": "vicy123",
+        "fullname": "vicky Kumar",
+        "password": "12345",
+        "profilePic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704280763/zam7j3sp0t0it5phhqc0.jpg",
+        "dob": "1996-05-12",
+        "gender": "agender",
+        "location": "Patna",
+        "education": "Mtech",
+        "profession": "Web developer",
+        "bio": "i am haopoy",
+        "posts": [
+          {
+            "id": "1b4d70b4-09fe-4774-b8c4-f36c6c31f6d1",
+            "text": "I am happy.",
+            "postPic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704280931/mova3ex8bx5yzrsbmuck.jpg"
+          }
+        ],
+        "friends": []
+      },
+      "2": {
+        "id": "cdf8d0eb-9d3c-4348-9975-4b8b38740ad5",
+        "email": "komal@gmail.com",
+        "username": "komal23",
+        "fullname": "Komal Sharma",
+        "password": "12345",
+        "profilePic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704340130/uskxefc7n7gwavxngck8.jpg",
+        "dob": "1997-05-12",
+        "gender": "two_spirit",
+        "location": "Delhi",
+        "education": "MA Arts",
+        "profession": "Journalist",
+        "bio": "I am exploring the dimensions of life.",
+        "posts": [
+          {
+            "id": "36663531-8ff8-4bdd-9201-d462def7e63b",
+            "text": "Winter is coming.",
+            "postPic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704341315/q7qbpk1cmw8otfosiheu.jpg"
+          },
+          {
+            "id": "1b4d70b4-09fe-4774-b8c4-f36c6c31f6d1",
+            "text": "I am happy.",
+            "postPic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704280931/mova3ex8bx5yzrsbmuck.jpg"
+          }
+        ],
+        "friends": [
+          {
+            "id": "5f3135bc-4165-41d7-ac6f-8992e433ff28"
+          }
+        ]
+      },
+      "3": {
+        "id": "9a593416-7b33-4905-878d-86ef8a782bf0",
+        "email": "senorita@hotmail.com",
+        "username": "charmingSenorita",
+        "fullname": "Senorita Khanna",
+        "password": "seno123",
+        "profilePic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704374046/qvtzt7wqwpbh4yavqhsk.jpg",
+        "dob": "",
+        "gender": "",
+        "location": "",
+        "education": "",
+        "profession": "",
+        "bio": "",
+        "posts": [],
+        "friends": []
+      },
+      "gender": "female",
+      "dob": "1994-06-12",
+      "id": "9a593416-7b33-4905-878d-86ef8a782bf0",
+      "location": "Chandigarh",
+      "education": "B.Tech",
+      "profession": "HR",
+      "bio": "I am an enthusiastic individual."
+    }
+  ]
+}

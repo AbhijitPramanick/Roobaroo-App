@@ -1,0 +1,14 @@
+.inputFormFlower {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.flower {
+  width: 60%;
+  padding-inline: auto;
+}
+.flower img {
+  width: 50%;
+}
