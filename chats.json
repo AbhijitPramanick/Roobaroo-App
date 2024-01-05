@@ -1,0 +1,15 @@
+{
+  "userchats": [
+    {
+      "chatid": "aa",
+      "chats": [
+        { "5f3135bc-4165-41d7-ac6f-8992e433ff28": "Hello" },
+        { "7511c2da-2897-4638-919d-6b229688a1d8": "Hi" },
+        {
+          "5f3135bc-4165-41d7-ac6f-8992e433ff28": "Ye Melody itni chocolaty kyun hai?"
+        },
+        { "7511c2da-2897-4638-919d-6b229688a1d8": "Mujhe nahi pata." }
+      ]
+    }
+  ]
+}

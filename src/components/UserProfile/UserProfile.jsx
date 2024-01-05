@@ -11,7 +11,7 @@ const UserProfile = () => {
   const [userId, setUserId] = useState("");
   const [user, setUser] = useState({});
   const location = useLocation();
-  const [sideBarAction, setSideBarAction] = useState("");
+  const [sideBarAction, setSideBarAction] = useState("homepage");
   useEffect(() => {
     const fetchUser = () => {
       setUserId(location?.state);
@@ -50,7 +50,7 @@ const UserProfile = () => {
                   Edit Profile
                 </button>
                 <button className={Styles.userInfo_topSection_btn}>
-                  View Archive
+                  Logout
                 </button>
               </div>
               <div className={Styles.midSecInfoDiv}>

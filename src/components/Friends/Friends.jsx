@@ -83,11 +83,11 @@ const Friends = ({ userIdData }) => {
       <div className={Styles.displayUsers_list}>
         {isAddFriends
           ? friendsArr.map((u) => (
-              <div className={Styles.displayUser}>
+              <div className={Styles.displayUser} key={u.id}>
                 <img
                   className={Styles.displayUser_profilePic}
                   src={u?.profilePic}
-                  alt={`${u?.fullname.split(" ")[0]}'s profile picture`}
+                  alt={`${u?.fullname?.split(" ")[0]}'s profile picture`}
                 />
                 <p className={Styles.displayUser_fullname}>{u?.fullname}</p>
                 <button
@@ -99,11 +99,11 @@ const Friends = ({ userIdData }) => {
               </div>
             ))
           : nonFriendsArr.map((u) => (
-              <div className={Styles.displayUser}>
+              <div className={Styles.displayUser} key={u.id}>
                 <img
                   className={Styles.displayUser_profilePic}
                   src={u?.profilePic}
-                  alt={`${u?.fullname.split(" ")[0]}'s profile picture`}
+                  alt={`${u?.fullname?.split(" ")[0]}'s profile picture`}
                 />
                 <p className={Styles.displayUser_fullname}>{u?.fullname}</p>
                 <button

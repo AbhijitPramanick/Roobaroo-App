@@ -12,6 +12,7 @@ const AddProfilePic = () => {
   const [imgUrl, setImgUrl] = useState(null);
   const [userId, setUserId] = useState("");
   const [users, setUsers] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   //Consoling to debug
   console.log(img);
@@ -31,12 +32,13 @@ const AddProfilePic = () => {
 
   //Function to upload image to cloudinary and saving the url to the db.json
   const uploadImg = async () => {
+    setIsLoading(true);
     const formData = new FormData();
     formData.append("file", img);
     formData.append("upload_preset", "myCloud");
     formData.append("cloud_name", "duidqdysu");
-    axios
-      .post(
+    try {
+      const res = await axios.post(
         "https://api.cloudinary.com/v1_1/duidqdysu/image/upload",
         formData,
         {
@@ -44,9 +46,14 @@ const AddProfilePic = () => {
             "Content-Type": "multipart/form-data",
           },
         }
-      )
-      .then((res) => res.data)
-      .then((data) => setImgUrl(data.url));
+      );
+      const data = res.data;
+      setImgUrl(data.url);
+    } catch (err) {
+      console.log(`Error while uploading the image to cloudinary`);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   //function to fetch user details using user ID
@@ -55,7 +62,6 @@ const AddProfilePic = () => {
       try {
         const userUpdated = users?.find((u) => u.id === userId);
         console.log(`Addprofilepic component - Updated User : `, userUpdated);
-
         await axios.put(`http://localhost:3000/users/${userId}`, {
           ...userUpdated,
           profilePic: imgUrl,
@@ -94,7 +100,7 @@ const AddProfilePic = () => {
           <img
             src={imgDisplay}
             alt="Add profile Pic thumbnail"
-            className={Styles.addProfilePicLabelBoxImg}
+            className={`${Styles.addProfilePicLabelBoxImg_uploaded}`}
           />
         ) : (
           <img
@@ -103,9 +109,11 @@ const AddProfilePic = () => {
             className={Styles.addProfilePicLabelBoxImg}
           />
         )}
-        <p className={Styles.addProfilePicLabelBox_text}>
-          Click icon to upload Img
-        </p>
+        {imgDisplay === null && (
+          <p className={Styles.addProfilePicLabelBox_text}>
+            Click icon to upload Img
+          </p>
+        )}
       </label>
       <input
         type="file"
@@ -119,11 +127,10 @@ const AddProfilePic = () => {
       <button className={Styles.addProfilePicInput_btn} onClick={uploadImg}>
         Upload
       </button>
-      {imgUrl && (
-        <button className={Styles.addProfilePicInput_btn} onClick={nextPage}>
-          {imgUrl === null ? "Skip" : "Next"}
-        </button>
-      )}
+      {isLoading && <p className={Styles.uploadingText}>Uploading...</p>}
+      <button className={Styles.addProfilePicInput_btn} onClick={nextPage}>
+        {imgUrl === null ? "Skip image upload" : "Next"}
+      </button>
     </div>
   );
 };
