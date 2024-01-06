@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Styles from "./UserProfile.module.css";
 import SideBar from "../SideBar/SideBar";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import CreatePost from "../CreatePost/CreatePost";
 import Friends from "../Friends/Friends";
 import Profile from "../Profile/Profile";
 import HomePage from "../HomePage/HomePage";
+import MessagesPage from "../MessagesPage/MessagesPage";
 const UserProfile = () => {
   const [userId, setUserId] = useState("");
   const [user, setUser] = useState({});
   const location = useLocation();
   const [sideBarAction, setSideBarAction] = useState("homepage");
+  const navigate = useNavigate();
   useEffect(() => {
     const fetchUser = () => {
       setUserId(location?.state);
@@ -46,9 +48,6 @@ const UserProfile = () => {
                 <span className={Styles.userInfo_userNameText}>
                   {user?.username}
                 </span>
-                <button className={Styles.userInfo_topSection_btn}>
-                  Edit Profile
-                </button>
                 <button className={Styles.userInfo_topSection_btn}>
                   Logout
                 </button>
@@ -90,6 +89,7 @@ const UserProfile = () => {
           {sideBarAction === "friends" && <Friends userIdData={userId} />}
           {sideBarAction === "profile" && <Profile userIdData={userId} />}
           {sideBarAction === "homepage" && <HomePage userIdData={userId} />}
+          {sideBarAction === "messages" && <MessagesPage userIdData={userId} />}
         </div>
       </div>
     </div>

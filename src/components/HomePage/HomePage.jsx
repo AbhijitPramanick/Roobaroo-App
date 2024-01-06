@@ -15,17 +15,12 @@ const HomePage = ({ userIdData }) => {
       console.log(`Error while Fetching user Details : ${err}`);
     }
   }, []);
-  useEffect(() => {
-    if (user) {
-      console.log(`User.posts : `, user?.posts);
-    }
-  }, [user]);
-  console.log(`User : `, user);
+
   return (
     <div className={Styles.homePageContainer}>
       <h1 className={Styles.homePageContainer_pageHeading}>Homepage</h1>
       {user?.posts?.map((p) => (
-        <div className={Styles.homePageContainer_postBox}>
+        <div className={Styles.homePageContainer_postBox} key={p.id}>
           <img
             className={Styles.homePageContainer_postBox_postImg}
             src={p?.postPic}

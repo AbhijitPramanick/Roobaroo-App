@@ -8,6 +8,7 @@ import AddProfilePic from "./components/AddProfilePic/AddProfilePic";
 import AddGenderDob from "./components/AddGenderDob/AddGenderDob";
 import AddBio from "./components/AddBio/AddBio";
 import CreatePost from "./components/CreatePost/CreatePost";
+import MessagesPage from "./components/MessagesPage/MessagesPage";
 const App = () => {
   return (
     <>
@@ -22,6 +23,7 @@ const App = () => {
               <Route path="/addgenderdob" element={<AddGenderDob />} />
               <Route path="/addbio" element={<AddBio />} />
               <Route path="/createpost" element={<CreatePost />} />
+              <Route path="/messages" element={<MessagesPage />} />
             </Routes>
           </BrowserRouter>
         </div>

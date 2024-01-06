@@ -21,18 +21,15 @@ const SideBar = ({ sideBarActionFunc }) => {
           </li>
           <li>
             <TbFriends />
-
             <a onClick={() => sideBarActionFunc("friends")}>Friends</a>
           </li>
 
           <li>
             <SlPaperPlane />
-
             <a onClick={() => sideBarActionFunc("messages")}>Messages</a>
           </li>
           <li>
             <CgProfile />
-
             <a onClick={() => sideBarActionFunc("profile")}>Profile</a>
           </li>
           <li>

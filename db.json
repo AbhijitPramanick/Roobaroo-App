@@ -15,23 +15,24 @@
       "bio": "Hello, I'm Abhijit Pramanick, a 27-year-old web developer with a background in electrical engineering. I find joy in reading books and exploring new places while embracing the dynamic world of web development. Let's connect, share ideas, and create meaningful experiences together!",
       "posts": [
         {
-          "id": 1,
-          "text": "Hello",
-          "postPic": ""
+          "id": "5cdf050a-e1e7-407d-b1a0-9fed8ad677e5",
+          "text": "Hare Krishna.\nIn Vrindavan's embrace, a divine melody,\nFlute in hand, a soul's symphony.\nKrishna, the cosmic dancer, in rapturous delight,\nGuiding hearts through the cosmic night.\n\nEyes like pools of eternity's grace,\nA radiant smile, love's sacred embrace.\nThrough Brindavan's groves, His footsteps dance,\nA celestial rhythm, a cosmic trance.\nIn every heart, His presence we feel,\nA sacred love, forever real.",
+          "postPic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704280077/hlcqpvtxbaanrssbkbuk.jpg"
         },
         {
-          "id": "5cdf050a-e1e7-407d-b1a0-9fed8ad677e5",
-          "text": "Hare Krishna.\nIn Vrindavan's embrace, a divine melody,\nFlute in hand, a soul's symphony.\nKrishna, the cosmic dancer, in rapturous delight,\nGuiding hearts through the cosmic night.\n\nEyes like pools of eternity's grace,\nA radiant smile, love's sacred embrace.\nThrough Brindavan's groves, His footsteps dance,\nA celestial rhythm, a cosmic trance.\n\nGopis enchanted, in devotion's swirl,\nThe music of love, an eternal pearl.\nYamuna's waters, a mirror of His grace,\nReflecting the beauty of that celestial face.\n\nThe peacock's plume, the divine adornment,\nKrishna, the essence of love's fulfillment.\nIn tales of Vrindavan, His lila unfolds,\nA saga of love, eternal and untold.\n\nKrishna, the flute player, a melody divine,\nGuiding souls to a realm beyond time.\nIn every heart, His presence we feel,\nA sacred love, forever real.",
-          "postPic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704280077/hlcqpvtxbaanrssbkbuk.jpg"
+          "id": "a5619891-47c7-4050-a392-dcb892335c89",
+          "text": "Good",
+          "postPic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704536925/ns6saed23dks659sykjg.jpg"
         }
       ],
       "friends": [
         {
-          "id": "5f3135bc-4165-41d7-ac6f-8992e433ff28",
-          "chatid": "aa"
+          "id": "cdf8d0eb-9d3c-4348-9975-4b8b38740ad5",
+          "chatId": "917f5510-30e8-4b54-bab1-91bb4d89b06a"
         },
         {
-          "id": "cdf8d0eb-9d3c-4348-9975-4b8b38740ad5"
+          "id": "1ead3b0e-51b1-4fd7-90f9-b829d4d02460",
+          "chatId": "83f0af20-a607-441c-9362-93d95fb51a0d"
         }
       ]
     },
@@ -57,8 +58,8 @@
       ],
       "friends": [
         {
-          "id": "7511c2da-2897-4638-919d-6b229688a1d8",
-          "chatid": "aa"
+          "id": "1ead3b0e-51b1-4fd7-90f9-b829d4d02460",
+          "chatId": "247accf2-7468-46f7-95af-4004509ad8de"
         }
       ]
     },
@@ -94,10 +95,12 @@
       ],
       "friends": [
         {
-          "id": "7511c2da-2897-4638-919d-6b229688a1d8"
+          "id": "1ead3b0e-51b1-4fd7-90f9-b829d4d02460",
+          "chatId": "94b1eeb5-bb49-4890-9d2d-302ca4d7a21b"
         },
         {
-          "id": "5f3135bc-4165-41d7-ac6f-8992e433ff28"
+          "id": "7511c2da-2897-4638-919d-6b229688a1d8",
+          "chatId": "917f5510-30e8-4b54-bab1-91bb4d89b06a"
         }
       ]
     },
@@ -117,10 +120,16 @@
       "posts": [],
       "friends": [
         {
-          "id": "5f3135bc-4165-41d7-ac6f-8992e433ff28"
+          "id": "5f3135bc-4165-41d7-ac6f-8992e433ff28",
+          "chatId": "247accf2-7468-46f7-95af-4004509ad8de"
         },
         {
-          "id": "cdf8d0eb-9d3c-4348-9975-4b8b38740ad5"
+          "id": "cdf8d0eb-9d3c-4348-9975-4b8b38740ad5",
+          "chatId": "94b1eeb5-bb49-4890-9d2d-302ca4d7a21b"
+        },
+        {
+          "id": "7511c2da-2897-4638-919d-6b229688a1d8",
+          "chatId": "83f0af20-a607-441c-9362-93d95fb51a0d"
         }
       ]
     }

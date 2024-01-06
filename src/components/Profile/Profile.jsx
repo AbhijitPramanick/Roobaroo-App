@@ -4,7 +4,6 @@ import { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
 const Profile = ({ userIdData }) => {
-  console.log(`User Id : `, userIdData);
   const [user, setUser] = useState({});
 
   useEffect(() => {

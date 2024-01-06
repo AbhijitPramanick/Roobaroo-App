@@ -25,12 +25,8 @@ const CreatePost = ({ userIdData }) => {
         );
     }
   }, [userId]);
+
   useEffect(() => {
-    console.log(`User ID : ${userId}`);
-    console.log(`User : `, user);
-  }, [userId, user]);
-  useEffect(() => {
-    console.log(`PostImgUrl : `, postImgUrl);
     saveInDatabase();
   }, [postImgUrl]);
   const clearInputStates = () => {
@@ -86,9 +82,6 @@ const CreatePost = ({ userIdData }) => {
       }
     }
   };
-  console.log(`PostText : ${postText}`);
-  console.log(`PostImgFile : `, postImgFile);
-  console.log(`PostImgUrl : `, postImgUrl);
   return (
     <div className={Styles.createPostContainer}>
       {isAddEnable ? (

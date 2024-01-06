@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Styles from "./Friends.module.css";
 import axios from "axios";
+import FriendDetailBox from "../FriendDetailBox/FriendDetailBox";
+import { v4 as uuidv4 } from "uuid";
+
 const Friends = ({ userIdData }) => {
   const [isAddFriends, setIsAddFriends] = useState(1);
   const [userId, setUserId] = useState("");
@@ -34,7 +37,9 @@ const Friends = ({ userIdData }) => {
     }
   }, [user]);
 
+  // ---------------------------------------------------------------
   const handleUnfriend = async (friendId) => {
+    console.log(friendId);
     if (user) {
       try {
         await axios.patch(`http://localhost:3000/users/${userId}`, {
@@ -44,22 +49,71 @@ const Friends = ({ userIdData }) => {
           `http://localhost:3000/users/${userId}`
         );
         setUser(updatedUser.data);
+
+        // Fetch and update toBeFriend user
+        const response = await axios.get(
+          `http://localhost:3000/users/${friendId}`
+        );
+        console.log(response);
+        console.log(`response.data : `, response.data);
+        const toBeUnfriendUserData = response.data;
+        console.log(`toBeUnfriendUserData: `, toBeUnfriendUserData);
+        await axios.patch(
+          `http://localhost:3000/users/${toBeUnfriendUserData.id}`,
+          {
+            friends: toBeUnfriendUserData?.friends.filter(
+              (friend) => friend.id !== user.id
+            ),
+          }
+        );
       } catch (err) {
-        console.log(`Error while unfriending friendId ${friendId} : ${err}`);
+        console.log(`Error while unFriending friendId ${friendId}, ${err}`);
       }
     }
   };
 
+  // ---------------------------------------------------------------
   const handleBefriend = async (nonFriendId) => {
+    const chatId = uuidv4();
     if (user) {
+      console.log(nonFriendId);
       try {
+        // Update user
         await axios.patch(`http://localhost:3000/users/${userId}`, {
-          friends: [...user?.friends, { id: nonFriendId }],
+          friends: [...user?.friends, { id: nonFriendId, chatId: chatId }],
         });
+
+        // Fetch updated user data
         const updatedUser = await axios.get(
           `http://localhost:3000/users/${userId}`
         );
         setUser(updatedUser.data);
+
+        // Fetch and update toBeFriend user
+        const response = await axios.get(
+          `http://localhost:3000/users/${nonFriendId}`
+        );
+        const toBeFriendUserData = response.data;
+        console.log(`toBeFriendUserData: `, toBeFriendUserData);
+
+        await axios.patch(
+          `http://localhost:3000/users/${toBeFriendUserData.id}`,
+          {
+            friends: [
+              ...toBeFriendUserData?.friends,
+              { id: user.id, chatId: chatId },
+            ],
+          }
+        );
+        const chatsResponse = await axios.get(
+          `http://localhost:3001/userchats`
+        );
+        const totalUserChats = chatsResponse.data;
+
+        await axios.post(`http://localhost:3001/userchats`, {
+          id: chatId,
+          chats: [],
+        });
       } catch (err) {
         console.log(
           `Error while befriending nonFriendId ${nonFriendId}, ${err}`
@@ -67,6 +121,9 @@ const Friends = ({ userIdData }) => {
       }
     }
   };
+  // ---------------------------------------------------------------
+
+  //Returning the JSX
   return (
     <div className={Styles.friendsContainer}>
       <div className={Styles.topBtnBox}>
@@ -83,36 +140,20 @@ const Friends = ({ userIdData }) => {
       <div className={Styles.displayUsers_list}>
         {isAddFriends
           ? friendsArr.map((u) => (
-              <div className={Styles.displayUser} key={u.id}>
-                <img
-                  className={Styles.displayUser_profilePic}
-                  src={u?.profilePic}
-                  alt={`${u?.fullname?.split(" ")[0]}'s profile picture`}
-                />
-                <p className={Styles.displayUser_fullname}>{u?.fullname}</p>
-                <button
-                  className={Styles.displayUser_btn}
-                  onClick={() => handleUnfriend(u.id)}
-                >
-                  Unfriend
-                </button>
-              </div>
+              <FriendDetailBox
+                key={u.id}
+                userDetails={u}
+                action={"isFriend"}
+                handleFrndAction={handleUnfriend}
+              />
             ))
           : nonFriendsArr.map((u) => (
-              <div className={Styles.displayUser} key={u.id}>
-                <img
-                  className={Styles.displayUser_profilePic}
-                  src={u?.profilePic}
-                  alt={`${u?.fullname?.split(" ")[0]}'s profile picture`}
-                />
-                <p className={Styles.displayUser_fullname}>{u?.fullname}</p>
-                <button
-                  className={Styles.displayUser_btn}
-                  onClick={() => handleBefriend(u.id)}
-                >
-                  Befriend
-                </button>
-              </div>
+              <FriendDetailBox
+                key={u.id}
+                userDetails={u}
+                action={"isNonFriend"}
+                handleFrndAction={handleBefriend}
+              />
             ))}
       </div>
     </div>
