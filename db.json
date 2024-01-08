@@ -23,16 +23,36 @@
           "id": "a5619891-47c7-4050-a392-dcb892335c89",
           "text": "Good",
           "postPic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704536925/ns6saed23dks659sykjg.jpg"
+        },
+        {
+          "id": "d696e067-e6a6-42f1-a224-4239dd71cbd3",
+          "text": "My friend, accept my friend request.",
+          "postPic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704709360/btdi1v3qqk3htnzwqsxo.jpg"
+        },
+        {
+          "id": "5bf912bf-0e05-468d-b1d4-66e7721f1bb3",
+          "text": "Tennis",
+          "postPic": "http://res.cloudinary.com/duidqdysu/video/upload/v1704710464/kponug8zn3ol0rm5xevp.mp4"
+        },
+        {
+          "id": "11823f5f-73c6-4505-a6a8-d918786c0ac0",
+          "text": "Happy",
+          "postPic": "http://res.cloudinary.com/duidqdysu/image/upload/v1704711566/wpmobpdnxclhtyd6ahyr.jpg"
+        },
+        {
+          "id": "57fb548e-1e33-4d50-8c6a-683377987f14",
+          "text": "Freefall.",
+          "postPic": "http://res.cloudinary.com/duidqdysu/video/upload/v1704714792/xkexuummjp3uy5ddhs8h.mp4"
         }
       ],
       "friends": [
         {
-          "id": "cdf8d0eb-9d3c-4348-9975-4b8b38740ad5",
-          "chatId": "917f5510-30e8-4b54-bab1-91bb4d89b06a"
-        },
-        {
           "id": "1ead3b0e-51b1-4fd7-90f9-b829d4d02460",
           "chatId": "83f0af20-a607-441c-9362-93d95fb51a0d"
+        },
+        {
+          "id": "5f3135bc-4165-41d7-ac6f-8992e433ff28",
+          "chatId": "1292a3b8-9e0c-48ac-89b0-ef1781577b43"
         }
       ]
     },
@@ -60,6 +80,10 @@
         {
           "id": "1ead3b0e-51b1-4fd7-90f9-b829d4d02460",
           "chatId": "247accf2-7468-46f7-95af-4004509ad8de"
+        },
+        {
+          "id": "7511c2da-2897-4638-919d-6b229688a1d8",
+          "chatId": "1292a3b8-9e0c-48ac-89b0-ef1781577b43"
         }
       ]
     },
@@ -96,11 +120,7 @@
       "friends": [
         {
           "id": "1ead3b0e-51b1-4fd7-90f9-b829d4d02460",
-          "chatId": "94b1eeb5-bb49-4890-9d2d-302ca4d7a21b"
-        },
-        {
-          "id": "7511c2da-2897-4638-919d-6b229688a1d8",
-          "chatId": "917f5510-30e8-4b54-bab1-91bb4d89b06a"
+          "chatId": "830a2cef-bf19-4c06-bdaf-852302118747"
         }
       ]
     },
@@ -124,12 +144,12 @@
           "chatId": "247accf2-7468-46f7-95af-4004509ad8de"
         },
         {
-          "id": "cdf8d0eb-9d3c-4348-9975-4b8b38740ad5",
-          "chatId": "94b1eeb5-bb49-4890-9d2d-302ca4d7a21b"
-        },
-        {
           "id": "7511c2da-2897-4638-919d-6b229688a1d8",
           "chatId": "83f0af20-a607-441c-9362-93d95fb51a0d"
+        },
+        {
+          "id": "cdf8d0eb-9d3c-4348-9975-4b8b38740ad5",
+          "chatId": "830a2cef-bf19-4c06-bdaf-852302118747"
         }
       ]
     }

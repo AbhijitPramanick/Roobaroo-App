@@ -11,6 +11,7 @@ const CreatePost = ({ userIdData }) => {
   const [user, setUser] = useState({});
   const [postText, setPostText] = useState("");
   const [postImgFile, setPostImgFile] = useState(null);
+  const [postImgFileType, setPostImgFileType] = useState("");
   const [postImgUrl, setPostImgUrl] = useState("");
   useEffect(() => {
     setUserId(userIdData);
@@ -33,9 +34,6 @@ const CreatePost = ({ userIdData }) => {
     setPostText("");
     setPostImgFile(null);
     setPostImgUrl("");
-    setTimeout(() => {
-      setMesgText("Click icon to upload");
-    }, 3000);
   };
   const abortAddpost = () => {
     clearInputStates();
@@ -43,6 +41,10 @@ const CreatePost = ({ userIdData }) => {
   };
   const handleAddIconClick = () => {
     setIsAddEnable(1);
+  };
+  const handleChange = (event) => {
+    setPostImgFile(event.target.files[0]);
+    setPostImgFileType(event.target.files[0].type);
   };
   const handleUpload = () => {
     postText === "" &&
@@ -53,15 +55,11 @@ const CreatePost = ({ userIdData }) => {
     formData.append("upload_preset", "myCloud");
     formData.append("cloud_name", "duidqdysu");
     axios
-      .post(
-        "https://api.cloudinary.com/v1_1/duidqdysu/image/upload",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        }
-      )
+      .post("https://api.cloudinary.com/v1_1/duidqdysu/upload", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
       .then((res) => res.data)
       .then((data) => setPostImgUrl(data.url));
   };
@@ -82,6 +80,8 @@ const CreatePost = ({ userIdData }) => {
       }
     }
   };
+  console.log(`postImgFile : `, postImgFile);
+  console.log(`postImgUrl : `, postImgUrl);
   return (
     <div className={Styles.createPostContainer}>
       {isAddEnable ? (
@@ -116,20 +116,30 @@ const CreatePost = ({ userIdData }) => {
             onChange={(e) => setPostText(e.target.value)}
           />
           <div className={Styles.addPostBox_imgDisplay}>
-            {postImgFile && (
+            {postImgFile && postImgFileType.split("/")[0] === "image" && (
               <img src={URL.createObjectURL(postImgFile)} alt="uploaded img" />
+            )}
+            {postImgFile && postImgFileType.split("/")[0] === "video" && (
+              <video
+                src={URL.createObjectURL(postImgFile)}
+                alt="Video"
+                autoPlay
+                muted
+                controls
+              />
             )}
           </div>
           <div className={Styles.addPostBoxImg}>
             <label htmlFor="postImg" className={Styles.addPostBoxImgLabel}>
-              <IoMdImages /> Add Photos
+              <IoMdImages /> Add Photos/Videos
             </label>
             <input
               type="file"
               name="postImg"
               id="postImg"
               className={Styles.addPostBoxImgFile}
-              onChange={(e) => setPostImgFile(e.target.files[0])}
+              // onChange={(e) => setPostImgFile(e.target.files[0])}
+              onChange={(e) => handleChange(e)}
             />
           </div>
           <button onClick={handleUpload} className={Styles.addPostBox_btn}>

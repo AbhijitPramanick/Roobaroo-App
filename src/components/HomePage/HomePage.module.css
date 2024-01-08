@@ -23,12 +23,14 @@
   justify-content: center;
   background-color: rgb(247, 247, 247);
   border-radius: 10px;
+  box-shadow: 0 -20px 10px -20px rgba(0, 0, 0, 0.45) inset,
+    20px 0 10px -20px rgba(0, 0, 0, 0.45) inset;
 }
 .homePageContainer_postBox_postImg {
   width: 50%;
   border-radius: 10px;
 }
 .homePageContainer_postBox_postText {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-style: italic;
 }

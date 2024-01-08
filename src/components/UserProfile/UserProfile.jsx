@@ -34,6 +34,9 @@ const UserProfile = () => {
   useEffect(() => {
     console.log(`User : `, user);
   }, [user]);
+  const handleLogout = () => {
+    navigate("/");
+  };
   return (
     <div className={Styles.userProfileMainContainer}>
       <div className={Styles.userProfileContainer}>
@@ -48,7 +51,10 @@ const UserProfile = () => {
                 <span className={Styles.userInfo_userNameText}>
                   {user?.username}
                 </span>
-                <button className={Styles.userInfo_topSection_btn}>
+                <button
+                  className={Styles.userInfo_topSection_btn}
+                  onClick={handleLogout}
+                >
                   Logout
                 </button>
               </div>

@@ -29,16 +29,10 @@ const ChatBox = ({ selfUser, friendUser }) => {
 
   //Setting the userChats state from the userChats database using the chatId
   useEffect(() => {
-    console.log(`userTotalChats : `, userTotalChats);
-    console.log(
-      `userTotalChats?.find((c) => c.id === chatId) : `,
-      userTotalChats?.find((c) => c.id === chatId)
-    );
     {
       setUserChats(userTotalChats?.find((c) => c.id === chatId));
     }
   }, [userTotalChats]);
-  console.log(`userChats : `, userChats);
 
   //following function saves the chats sent by the user in the chats database.
   const handleSendChat = () => {
