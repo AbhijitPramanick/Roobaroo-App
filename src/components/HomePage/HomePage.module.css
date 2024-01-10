@@ -12,6 +12,15 @@
 .homePageContainer_pageHeading {
   color: grey;
 }
+.homePageContainer_postLists {
+  display: flex;
+  height: fit-content;
+  width: 100%;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 10vh;
+}
 .homePageContainer_postBox {
   width: 90%;
   height: fit-content;
@@ -34,17 +43,39 @@
   font-size: 1rem;
   font-style: italic;
 }
-.deletePostBtn {
-  font-size: 1.1rem;
-  padding: 0.3rem 1rem;
+.postActionBtnDiv {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.postActionBtn {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.2rem 1rem;
   border-radius: 10px;
   border: 1px solid grey;
   cursor: pointer;
   background-color: aliceblue;
 }
-.deletePostBtn:hover {
+.postActionBtn:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-.deletePostBtn:active {
+.postActionBtn:active {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12);
+}
+.postEditBox {
+  width: 90%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1vh;
+  align-items: center;
+}
+.editTextDisplay {
+  height: 30vh;
+  width: 90%;
+  overflow-y: auto;
+  padding: 20px 10px;
 }

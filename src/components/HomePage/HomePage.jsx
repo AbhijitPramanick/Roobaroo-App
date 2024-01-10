@@ -6,6 +6,8 @@ const HomePage = ({ userIdData }) => {
   const [user, setUser] = useState({});
   const [userPosts, setUserPosts] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
+  const [postIdSelected, setPostIdSelected] = useState(null);
+  const [editText, setEditText] = useState("");
   const fetchData = async () => {
     try {
       const res = await axios.get(`http://localhost:3000/users/${userIdData}`);
@@ -19,6 +21,7 @@ const HomePage = ({ userIdData }) => {
   useEffect(() => {
     if (userIdData) fetchData();
   }, [userIdData]);
+
   const handleDeletePost = async (post) => {
     console.log(`PostId of the post to be deleted : `, post.id);
     console.log(`public_id of the post to be deleted : `, post);
@@ -29,14 +32,46 @@ const HomePage = ({ userIdData }) => {
     fetchData();
     console.log(`Post with postId ${post.id} deleted.`);
   };
+  const handleUpdatePost = async (post) => {
+    const updatedPosts = userPosts.filter((p) => p.id !== post.id);
+    const editedPost = {
+      id: post.id,
+      text: editText || post.text,
+      postPic: post.postPic,
+    };
+    console.log(`postId : `, post.id);
+    console.log(`UpdatedPosts : `, updatedPosts);
+    console.log(`Edited posts : `, editedPost);
+    updatedPosts.push(editedPost);
+    axios
+      .patch(`http://localhost:3000/users/${userIdData}`, {
+        posts: updatedPosts,
+      })
+      .then((response) => {
+        console.log("Update successful:", response.data);
+        setIsEditing(false);
+        setEditText("");
+        fetchData();
+      })
+      .catch((error) => {
+        console.error("Error updating post:", error);
+        // Handle error if needed
+      });
+  };
+
+  const handleEditPost = (post) => {
+    setIsEditing((p) => !p);
+    setPostIdSelected(post.id);
+  };
+
   return (
     <div className={Styles.homePageContainer}>
       <h1 className={Styles.homePageContainer_pageHeading}>Homepage</h1>
-      {userPosts &&
-        userPosts.map((p) => (
-          <div className={Styles.homePageContainer_postBox} key={p?.id}>
-            {!isEditing &&
-              p?.postPic
+      <div className={Styles.homePageContainer_postLists}>
+        {userPosts &&
+          userPosts.map((p) => (
+            <div className={Styles.homePageContainer_postBox} key={p?.id}>
+              {p?.postPic
                 .match(/\/duidqdysu\/(\w+)\/upload/i)[1]
                 .toLowerCase() === "image" && (
                 <img
@@ -45,8 +80,7 @@ const HomePage = ({ userIdData }) => {
                   alt={`${p?.id} profilepic`}
                 />
               )}
-            {!isEditing &&
-              p?.postPic
+              {p?.postPic
                 .match(/\/duidqdysu\/(\w+)\/upload/i)[1]
                 .toLowerCase() === "video" && (
                 <video
@@ -58,23 +92,44 @@ const HomePage = ({ userIdData }) => {
                   controls
                 />
               )}
-            {isEditing && (
+
               <p className={Styles.homePageContainer_postBox_postText}>
                 {p?.text}
               </p>
-            )}
-            {!isEditing && (
-              <>
+
+              <div className={Styles.postActionBtnDiv}>
+                <button
+                  onClick={() => handleEditPost(p)}
+                  className={Styles.postActionBtn}
+                >
+                  Edit
+                </button>
                 <button
                   onClick={() => handleDeletePost(p)}
-                  className={Styles.deletePostBtn}
+                  className={Styles.postActionBtn}
                 >
                   Delete post
                 </button>
-              </>
-            )}
-          </div>
-        ))}
+              </div>
+
+              {isEditing && p.id === postIdSelected && (
+                <div className={Styles.postEditBox}>
+                  <textarea
+                    value={editText}
+                    className={Styles.editTextDisplay}
+                    onChange={(e) => setEditText(e.target.value)}
+                  />
+                  <button
+                    onClick={() => handleUpdatePost(p)}
+                    className={Styles.postActionBtn}
+                  >
+                    update
+                  </button>
+                </div>
+              )}
+            </div>
+          ))}
+      </div>
     </div>
   );
 };
